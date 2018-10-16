@@ -1,3 +1,6 @@
+execute pathogen#infect()
+call pathogen#helptags()
+
 " General Vim settings
 	syntax on
 	let mapleader=","
@@ -11,8 +14,6 @@
 	autocmd Filetype html setlocal sw=2 expandtab
 	autocmd Filetype javascript setlocal sw=4 expandtab
 
-	set cursorline
-	hi Cursor ctermfg=White ctermbg=Yellow cterm=bold guifg=white guibg=yellow gui=bold
 
 	set hlsearch
 	nnoremap <C-l> :nohl<CR><C-l>:echo "Search Cleared"<CR>
@@ -21,11 +22,6 @@
 
 	nnoremap n nzzzv
 	nnoremap N Nzzzv
-
-	nnoremap H 0
-	nnoremap L $
-	nnoremap J G
-	nnoremap K gg
 
 	map <tab> %
 
@@ -114,3 +110,34 @@
 	"Swap line
 	"Insert blank below and above
 
+"hi Cursor ctermfg=White ctermbg=Yellow cterm=bold guifg=white guibg=yellow gui=bold
+
+colorscheme relaxedgreen
+"colorscheme neonwave
+"colorscheme neon
+"colorscheme crt
+
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#fnamemod = ':t'          " vim-airline 버퍼 목록 파일명만 출력
+let g:airline#extensions#tabline#buffer_nr_show = 1       " buffer number를 보여준다
+let g:airline#extensions#tabline#buffer_nr_format = '%s:' " buffer number format
+
+nmap <F8> :TagbarToggle<CR>
+
+
+set cursorline
+set cursorcolumn
+
+hi CursorLine   cterm=NONE ctermbg=237 ctermfg=NONE guibg=darkred guifg=white
+hi CursorColumn cterm=NONE ctermbg=235 ctermfg=NONE guibg=darkred guifg=white
+
+nnoremap <F9> :NERDTreeToggle<Enter>
+nnoremap <F3> :Ag
+
+"ag
+let g:ag_working_path_mode="r"
+let g:ctrlp_custom_ignore = {
+\ 'dir':  '\.git$\|public$\|log$\|tmp$\|vendor$',
+\ 'file': '\v\.(exe|so|dll)$'
+\ }
