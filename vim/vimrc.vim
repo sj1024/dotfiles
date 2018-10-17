@@ -112,7 +112,7 @@ call pathogen#helptags()
 
 "hi Cursor ctermfg=White ctermbg=Yellow cterm=bold guifg=white guibg=yellow gui=bold
 
-colorscheme relaxedgreen
+"colorscheme relaxedgreen
 "colorscheme neonwave
 "colorscheme neon
 "colorscheme crt
@@ -127,10 +127,10 @@ nmap <F8> :TagbarToggle<CR>
 
 
 set cursorline
-set cursorcolumn
+"set cursorcolumn
 
 hi CursorLine   cterm=NONE ctermbg=237 ctermfg=NONE guibg=darkred guifg=white
-hi CursorColumn cterm=NONE ctermbg=235 ctermfg=NONE guibg=darkred guifg=white
+"hi CursorColumn cterm=NONE ctermbg=235 ctermfg=NONE guibg=darkred guifg=white
 
 nnoremap <F9> :NERDTreeToggle<Enter>
 nnoremap <F3> :Ag
