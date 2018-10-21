@@ -116,6 +116,8 @@ call pathogen#helptags()
 "colorscheme neonwave
 "colorscheme neon
 "colorscheme crt
+set background=light
+colorscheme solarized 
 
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
@@ -129,7 +131,7 @@ nmap <F8> :TagbarToggle<CR>
 set cursorline
 "set cursorcolumn
 
-hi CursorLine   cterm=NONE ctermbg=237 ctermfg=NONE guibg=darkred guifg=white
+"hi CursorLine   cterm=NONE ctermbg=237 ctermfg=NONE guibg=darkred guifg=white
 "hi CursorColumn cterm=NONE ctermbg=235 ctermfg=NONE guibg=darkred guifg=white
 
 nnoremap <F9> :NERDTreeToggle<Enter>
@@ -141,3 +143,4 @@ let g:ctrlp_custom_ignore = {
 \ 'dir':  '\.git$\|public$\|log$\|tmp$\|vendor$',
 \ 'file': '\v\.(exe|so|dll)$'
 \ }
+set modeline
