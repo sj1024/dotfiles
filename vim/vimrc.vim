@@ -110,14 +110,9 @@ call pathogen#helptags()
 	"Swap line
 	"Insert blank below and above
 
-"hi Cursor ctermfg=White ctermbg=Yellow cterm=bold guifg=white guibg=yellow gui=bold
-
-"colorscheme relaxedgreen
-"colorscheme neonwave
-"colorscheme neon
-"colorscheme crt
 set background=light
 colorscheme solarized 
+hi CursorLine  cterm=reverse
 
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
@@ -130,9 +125,6 @@ nmap <F8> :TagbarToggle<CR>
 
 set cursorline
 "set cursorcolumn
-
-"hi CursorLine   cterm=NONE ctermbg=237 ctermfg=NONE guibg=darkred guifg=white
-"hi CursorColumn cterm=NONE ctermbg=235 ctermfg=NONE guibg=darkred guifg=white
 
 nnoremap <F9> :NERDTreeToggle<Enter>
 nnoremap <F3> :Ag
