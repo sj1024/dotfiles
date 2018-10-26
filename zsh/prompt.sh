@@ -7,10 +7,10 @@ setopt PROMPT_SUBST
 set_prompt() {
 
 	# [
-	PS1="%{$fg[white]%}[%{$reset_color%}"
+	PS1="%{$fg[blue]%}[%{$reset_color%}"
 
 	# Path: http://stevelosh.com/blog/2010/02/my-extravagant-zsh-prompt/
-	PS1+="%{$fg_bold[cyan]%}${PWD/#$HOME/~}%{$reset_color%}"
+	PS1+="${(%):-%m}:%{$fg_bold[cyan]%}${PWD/#$HOME/~}%{$reset_color%}"
 
 	# Status Code
 	PS1+='%(?.., %{$fg[red]%}%?%{$reset_color%})'
@@ -45,7 +45,7 @@ set_prompt() {
 		PS1+="%{$fg_bold[red]%}SUDO%{$reset_color%}"
 	fi
 
-	PS1+="%{$fg[white]%}]: %{$reset_color%}% "
+	PS1+="%{$fg[blue]%}]: %{$reset_color%}% "
 }
 
 precmd_functions+=set_prompt

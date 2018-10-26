@@ -15,4 +15,8 @@
 	zle -N git_prepare
 	bindkey "^g" git_prepare
 
+	bindkey "^[[A" history-search-backward
+
+	bindkey "^[[B" history-search-forward
+
 

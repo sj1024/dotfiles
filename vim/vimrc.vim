@@ -112,7 +112,7 @@ call pathogen#helptags()
 
 set background=light
 colorscheme solarized 
-hi CursorLine  cterm=reverse
+"hi CursorLine  cterm=reverse
 
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
@@ -123,7 +123,7 @@ let g:airline#extensions#tabline#buffer_nr_format = '%s:' " buffer number format
 nmap <F8> :TagbarToggle<CR>
 
 
-set cursorline
+"set cursorline
 "set cursorcolumn
 
 nnoremap <F9> :NERDTreeToggle<Enter>
