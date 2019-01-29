@@ -136,3 +136,4 @@ let g:ctrlp_custom_ignore = {
 \ 'file': '\v\.(exe|so|dll)$'
 \ }
 set modeline
+set modelines=10
