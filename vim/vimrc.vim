@@ -110,7 +110,8 @@ call pathogen#helptags()
 	"Swap line
 	"Insert blank below and above
 
-set background=light
+"set background=light
+set background=dark
 colorscheme solarized 
 "hi CursorLine  cterm=reverse
 
@@ -137,3 +138,16 @@ let g:ctrlp_custom_ignore = {
 \ }
 set modeline
 set modelines=10
+
+
+"" Remove all text except what matches the current search result
+"" The opposite of :%s///g (which clears all instances of the current search).
+function! ClearAllButMatches()
+    let old = @c
+    let @c=""
+    %s//\=setreg('C', submatch(0), 'l')/g
+    %d _
+    put c
+    0d _
+    let @c = old
+endfunction
