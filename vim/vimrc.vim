@@ -112,7 +112,7 @@ call pathogen#helptags()
 
 "set background=light
 set background=dark
-colorscheme solarized 
+colorscheme desert 
 "hi CursorLine  cterm=reverse
 
 let g:airline_powerline_fonts = 1
