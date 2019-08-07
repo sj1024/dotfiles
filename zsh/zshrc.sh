@@ -94,3 +94,8 @@ LS_COLORS='rs=0:di=1;35:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd
 export LS_COLORS
 
 alias wslreboot='/mnt/c/Windows/System32/WindowsPowerShell/v1.0/powershell.exe -command restart-computer -force'
+
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US.UTF-8
+
