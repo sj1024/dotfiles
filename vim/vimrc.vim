@@ -151,3 +151,5 @@ function! ClearAllButMatches()
     0d _
     let @c = old
 endfunction
+
+let g:airline_theme='alduin'
