@@ -7,7 +7,7 @@
 	git config --global push.default current
 
 # Aliases
-	alias v="vim -p"
+	alias v="nvim -p"
 	mkdir -p /tmp/log
 	alias ll='ls -al'
 	
@@ -104,3 +104,7 @@ if type rg &> /dev/null; then
   export FZF_DEFAULT_OPTS='-m --height 50% --border'
 fi
 
+
+alias vi="nvim"
+alias vim="nvim"
+export PATH=/opt/homebrew/bin:$PATH

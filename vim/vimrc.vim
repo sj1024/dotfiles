@@ -41,7 +41,8 @@ Plugin 'tpope/vim-speeddating'
 "Plugin 'calorie/vim-typing-sound'
 
 " Generic Programming Support 
-Plugin 'jakedouglas/exuberant-ctags'
+Plugin 'webastien/vim-ctags'
+"Plugin 'jakedouglas/exuberant-ctags'
 Plugin 'honza/vim-snippets'
 Plugin 'Townk/vim-autoclose'
 Plugin 'tomtom/tcomment_vim'
@@ -50,7 +51,6 @@ Plugin 'janko-m/vim-test'
 Plugin 'maksimr/vim-jsbeautify'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'neomake/neomake'
-
 " Markdown / Writting
 Plugin 'reedes/vim-pencil'
 Plugin 'tpope/vim-markdown'
@@ -113,7 +113,8 @@ Plugin 'colepeters/spacemacs-theme.vim'
 Plugin 'dylanaraps/wal.vim'
 Plugin 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 Plugin 'powerline/powerline'
-
+Plugin 'mcmartelle/vim-monokai-bold'
+Plugin 'altercation/vim-colors-solarized'
 
 " Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
 
@@ -169,17 +170,21 @@ let g:vim_typing_sound_command = 'afplay' " or 'afplay'
 let g:vim_typing_sound_path = '/Volumes/Workspace/Utilities/Sound/9744__horn__typewriter.wav'            " set your sound path
 
 "let base16colorspace=256  " Access colors present in 256 colorspace
-colorscheme challenger_deep
-let g:challenger_deep_termcolors = 256
+"colorscheme challenger_deep
+"colorscheme monokai-bold 
+"colorscheme solarized
+colorscheme molokai
 
+let g:monokai_term_italic = 1
+let g:monokai_gui_italic = 1
 let g:spacegray_underline_search = 1
 let g:spacegray_italicize_comments = 1
 
 " Vim-Airline Configuration
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1 
-let g:airline_theme='hybrid'
-"let g:airline_theme='alduin'
+"let g:airline_theme='hybrid'
+let g:airline_theme='alduin'
 
 " Syntastic Configuration
 set statusline+=%#warningmsg#
@@ -347,7 +352,7 @@ let g:fzf_history_dir = '~/.local/share/fzf-history'
 " Mappings configurationn
 """""""""""""""""""""""""""""""""""""
 map <C-n> :NERDTreeToggle<CR>
-map <C-m> :TagbarToggle<CR>
+"map <C-m> :TagbarToggle<CR>
 
 " Omnicomplete Better Nav
 inoremap <expr> <c-j> ("\<C-n>")
