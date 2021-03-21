@@ -34,6 +34,7 @@ Plugin 'benmills/vimux'
 Plugin 'jeetsukumaran/vim-buffergator'
 Plugin 'gilsondev/searchtasks.vim' 
 Plugin 'ycm-core/YouCompleteMe'
+"Plugin 'nvim-lua/completion-nvim'
 "Plugin 'Shougo/neocomplete.vim'
 Plugin 'tpope/vim-dispatch'
 Plugin 'jceb/vim-orgmode'
@@ -44,7 +45,7 @@ Plugin 'tpope/vim-speeddating'
 Plugin 'webastien/vim-ctags'
 "Plugin 'jakedouglas/exuberant-ctags'
 Plugin 'honza/vim-snippets'
-Plugin 'Townk/vim-autoclose'
+"Plugin 'Townk/vim-autoclose'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'tobyS/vmustache'
 Plugin 'janko-m/vim-test'
@@ -240,23 +241,23 @@ augroup END
 let test#strategy = "vimux"
 
 " Neocomplete Settings
-let g:acp_enableAtStartup = 0
+"let g:acp_enableAtStartup = 0
 "let g:neocomplete#enable_at_startup = 1
 "let g:neocomplete#enable_smart_case = 1
-let g:neocomplete#sources#syntax#min_keyword_length = 3
+"let g:neocomplete#sources#syntax#min_keyword_length = 3
 
 " Define dictionary.
-let g:neocomplete#sources#dictionary#dictionaries = {
-    \ 'default' : '',
-    \ 'vimshell' : $HOME.'/.vimshell_hist',
-    \ 'scheme' : $HOME.'/.gosh_completions'
-    \ }
+"let g:neocomplete#sources#dictionary#dictionaries = {
+"    \ 'default' : '',
+"    \ 'vimshell' : $HOME.'/.vimshell_hist',
+"    \ 'scheme' : $HOME.'/.gosh_completions'
+"    \ }
 
 " Define keyword.
-if !exists('g:neocomplete#keyword_patterns')
-    let g:neocomplete#keyword_patterns = {}
-endif
-let g:neocomplete#keyword_patterns['default'] = '\h\w*'
+"if !exists('g:neocomplete#keyword_patterns')
+"    let g:neocomplete#keyword_patterns = {}
+"endif
+"let g:neocomplete#keyword_patterns['default'] = '\h\w*'
 
 function! s:my_cr_function()
   return (pumvisible() ? "\<C-y>" : "" ) . "\<CR>"
@@ -282,16 +283,16 @@ autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
 " Enable heavy omni completion.
-if !exists('g:neocomplete#sources#omni#input_patterns')
-  let g:neocomplete#sources#omni#input_patterns = {}
-endif
+"if !exists('g:neocomplete#sources#omni#input_patterns')
+"  let g:neocomplete#sources#omni#input_patterns = {}
+"endif
 "let g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
 "let g:neocomplete#sources#omni#input_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
 "let g:neocomplete#sources#omni#input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
 
 " For perlomni.vim setting.
 " https://github.com/c9s/perlomni.vim
-let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
+"let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 
 " Elixir Tagbar Configuration
 let g:tagbar_type_elixir = {
@@ -321,7 +322,7 @@ let g:fzf_action = {
 
 " Default fzf layout
 " - down / up / left / right
-let g:fzf_layout = { 'down': '~40%' }
+let g:fzf_layout = { 'down': '~25%' }
 
 " In Neovim, you can set up fzf window using a Vim command
 let g:fzf_layout = { 'window': 'enew' }
@@ -359,8 +360,8 @@ inoremap <expr> <c-j> ("\<C-n>")
 inoremap <expr> <c-k> ("\<C-p>")
 
 " Neocomplete Plugin mappins
-inoremap <expr><C-g>     neocomplete#undo_completion()
-inoremap <expr><C-l>     neocomplete#complete_common_string()
+"inoremap <expr><C-g>     neocomplete#undo_completion()
+"inoremap <expr><C-l>     neocomplete#complete_common_string()
 
 " Recommended key-mappings.
 " <CR>: close popup and save indent.
@@ -370,8 +371,8 @@ inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
 " <C-h>, <BS>: close popup and delete backword char.
-inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
-inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
+"inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
+"inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
 
 " Mapping selecting Mappings
 nmap <leader><tab> <plug>(fzf-maps-n)
