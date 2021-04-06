@@ -24,7 +24,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'ervandew/supertab'
 Plugin 'BufOnly.vim'
 Plugin 'wesQ3/vim-windowswap'
-Plugin 'nathanaelkane/vim-indent-guides'
+"Plugin 'nathanaelkane/vim-indent-guides'
 "Plugin 'SirVer/ultisnips'
 Plugin 'junegunn/fzf.vim'
 Plugin 'junegunn/fzf'
@@ -116,6 +116,7 @@ Plugin 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 Plugin 'powerline/powerline'
 Plugin 'mcmartelle/vim-monokai-bold'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'Yggdroot/indentLine'
 
 " Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
 
@@ -173,8 +174,8 @@ let g:vim_typing_sound_path = '/Volumes/Workspace/Utilities/Sound/9744__horn__ty
 "let base16colorspace=256  " Access colors present in 256 colorspace
 "colorscheme challenger_deep
 "colorscheme monokai-bold 
-"colorscheme solarized
-colorscheme molokai
+colorscheme solarized
+"colorscheme molokai
 
 let g:monokai_term_italic = 1
 let g:monokai_gui_italic = 1
@@ -427,3 +428,6 @@ set modeline
 set modelines=10
 set cursorline
 set hlsearch
+
+let g:indentLine_setColors = 0
+let g:indentLine_char_list = ['|', '¦', '┆', '┊']
