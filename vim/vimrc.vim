@@ -18,6 +18,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " Utility
+Plugin 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
 "Plugin 'wakatime/vim-wakatime'
 Plugin 'scrooloose/nerdtree'
 Plugin 'majutsushi/tagbar'
@@ -28,12 +29,13 @@ Plugin 'wesQ3/vim-windowswap'
 "Plugin 'SirVer/ultisnips'
 Plugin 'junegunn/fzf.vim'
 Plugin 'junegunn/fzf'
+Plugin 'junegunn/vim-easy-align'
 Plugin 'godlygeek/tabular'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'benmills/vimux'
 Plugin 'jeetsukumaran/vim-buffergator'
 Plugin 'gilsondev/searchtasks.vim' 
-Plugin 'ycm-core/YouCompleteMe'
+"Plugin 'ycm-core/YouCompleteMe'
 "Plugin 'nvim-lua/completion-nvim'
 "Plugin 'Shougo/neocomplete.vim'
 Plugin 'tpope/vim-dispatch'
@@ -101,6 +103,7 @@ Plugin 'morhetz/gruvbox'
 Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
 Plugin 'junegunn/limelight.vim'
 Plugin 'mkarmona/colorsbox'
+Plugin 'kaicataldo/material.vim'
 Plugin 'romainl/Apprentice'
 Plugin 'Lokaltog/vim-distinguished'
 Plugin 'chriskempson/base16-vim'
@@ -174,8 +177,9 @@ let g:vim_typing_sound_path = '/Volumes/Workspace/Utilities/Sound/9744__horn__ty
 "let base16colorspace=256  " Access colors present in 256 colorspace
 "colorscheme challenger_deep
 "colorscheme monokai-bold 
-colorscheme solarized
+"colorscheme solarized
 "colorscheme molokai
+colorscheme material 
 
 let g:monokai_term_italic = 1
 let g:monokai_gui_italic = 1
@@ -431,3 +435,28 @@ set hlsearch
 
 let g:indentLine_setColors = 0
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+
+
+" For Neovim 0.1.3 and 0.1.4 - https://github.com/neovim/neovim/pull/2198
+if (has('nvim'))
+  let $NVIM_TUI_ENABLE_TRUE_COLOR = 1
+endif
+
+" For Neovim > 0.1.5 and Vim > patch 7.4.1799 - https://github.com/vim/vim/commit/61be73bb0f965a895bfb064ea3e55476ac175162
+" Based on Vim patch 7.4.1770 (`guicolors` option) - https://github.com/vim/vim/commit/8a633e3427b47286869aa4b96f2bfc1fe65b25cd
+" https://github.com/neovim/neovim/wiki/Following-HEAD#20160511
+if (has('termguicolors'))
+  set termguicolors
+endif
+
+let g:material_terminal_italics = 1
+colorscheme material
+
+
+"--- vim-easy-align
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
+
